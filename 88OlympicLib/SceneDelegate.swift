@@ -4,7 +4,7 @@
 //
 //  Created by 박성영 on 2022/08/28.
 //
-
+/*
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -49,4 +49,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
+*/
