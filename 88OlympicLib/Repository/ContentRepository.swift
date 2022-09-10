@@ -13,10 +13,25 @@ class ContentRepository : NSObject {
     
     private let serviceKey = "f2351856-8976-4d74-b050-fa29a5ecea9d"
     
-    func list() {
+    func list(completed: @escaping (RecordModel?) -> Void) {
         httpService.getJson(params: ["serviceKey": serviceKey, "numOfRows" : 10, "pageNo" : 1 ]) {
             result in
-            print("result===", result)
+            
+            if let result = result {
+                print("result===", result)
+                
+                let decoder = JSONDecoder()
+                
+                do {
+                    let res = try decoder.decode(RecordModel.self, from: result)
+                    completed(res)
+                } catch {
+                    completed(nil)
+                }
+            }
+            else{
+                completed(nil)
+            }
         }
     }
     

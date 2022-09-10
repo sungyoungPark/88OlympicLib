@@ -16,7 +16,7 @@ class HttpService {
         self.baseURL = baseURL
     }
     
-    func getJson(params: [String: Any], completed: @escaping (Any?) -> Void) {
+    func getJson(params: [String: Any], completed: @escaping (Data?) -> Void) {
         let queryParams = params.map { k, v in "\(k)=\(v)" }.joined(separator: "&")
         
         var fullPath = baseURL
@@ -37,7 +37,7 @@ class HttpService {
             case .success(let value):
                 let str = String(data: value, encoding: .utf8)
                 print(str)
-                completed(str)
+                completed(value)
             case .failure(let error):
                 completed(nil)
              

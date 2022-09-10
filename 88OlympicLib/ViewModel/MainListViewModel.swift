@@ -11,8 +11,13 @@ class MainListViewModel {
     
     var repo = ContentRepository()
     
+    var content : [RecordDetailContent]? = nil
+    
     func list(){
-        repo.list()
+        repo.list {
+            print(" main list vm == ", $0?.item)
+            self.content = $0?.item
+        }
     }
     
 }
