@@ -18,7 +18,7 @@ class ContentRepository : NSObject {
             result in
             
             if let result = result {
-                print("result===", result)
+                //print("result===", result)
                 
                 let decoder = JSONDecoder()
                 

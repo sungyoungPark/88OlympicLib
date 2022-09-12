@@ -33,8 +33,6 @@ struct RecordModel : Decodable {
         // address 키 안의 JSON Object에 대한 컨테이너를 가져온다.
         let bodyContainer = try responseContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .body)
         
-        print("body container ===", bodyContainer)
-        
         let itemsContainer = try bodyContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .items)
         
         self.item = try itemsContainer.decode([RecordDetailContent].self, forKey: .item)
@@ -49,6 +47,10 @@ struct RecordDetailContent : Decodable {
     var title : String                  //자원의 명칭
     var alternativeTitle : String       //대체 (기존 = alternativeTitle(대체) + ' ' + subTitle(부제))
     var temporalCoverage : String       //해당시간대 (기존 = period(기간) + ' ' + time(시간)), 경기 시간
+    
+    var description : String
+    var subDescription : String
+    
     var url : String
     
     enum CodingKeys: CodingKey {
@@ -57,6 +59,10 @@ struct RecordDetailContent : Decodable {
         case title
         case alternativeTitle
         case temporalCoverage
+        
+        case description
+        case subDescription
+        
         case url 
     }
     
@@ -66,6 +72,8 @@ struct RecordDetailContent : Decodable {
         self.title = (try? container.decode(String.self, forKey: .title)) ?? ""
         self.alternativeTitle = (try? container.decode(String.self, forKey: .alternativeTitle)) ?? ""
         self.temporalCoverage = (try? container.decode(String.self, forKey: .temporalCoverage)) ?? ""
+        self.description = (try? container.decode(String.self, forKey: .description)) ?? ""
+        self.subDescription = (try? container.decode(String.self, forKey: .subDescription)) ?? ""
         self.url = (try? container.decode(String.self, forKey: .url)) ?? ""
     }
 }

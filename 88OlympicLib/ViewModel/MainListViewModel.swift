@@ -13,10 +13,20 @@ class MainListViewModel {
     
     var content : [RecordDetailContent]? = nil
     
+    var contentUpdate: () -> Void = { }
+    
+    func contentCount() -> Int {
+        return content?.count ?? 0
+    }
+    
+    func content(at index : Int) -> RecordDetailContent?{
+        return content?[index]
+    }
+    
     func list(){
         repo.list {
-            print(" main list vm == ", $0?.item)
             self.content = $0?.item
+            self.contentUpdate()
         }
     }
     

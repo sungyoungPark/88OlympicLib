@@ -35,8 +35,7 @@ class HttpService {
             
             switch response.result {
             case .success(let value):
-                let str = String(data: value, encoding: .utf8)
-                print(str)
+                //let str = String(data: value, encoding: .utf8)
                 completed(value)
             case .failure(let error):
                 completed(nil)
