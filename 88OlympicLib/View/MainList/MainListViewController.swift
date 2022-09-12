@@ -28,13 +28,7 @@ class MainListViewController: UIViewController, ViewModelBindableType {
         
         setTableUI()
         
-        viewModel = MainListViewModel()
-        
-        viewModel.contentUpdate = { [weak self] in
-            self?.tableView.reloadData()
-        }
-        
-        viewModel.list()
+        //viewModel = MainListViewModel()
         
     }
 
@@ -47,7 +41,13 @@ class MainListViewController: UIViewController, ViewModelBindableType {
     
     
     func bindViewModel() {
-    
+        print("bind")
+        viewModel.contentUpdate = { [weak self] in
+            print("reload")
+            self?.tableView.reloadData()
+        }
+        
+        viewModel.list()
     }
 }
 

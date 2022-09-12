@@ -18,8 +18,11 @@ class MainCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        let vc = MainListViewController()
+        var vc = MainListViewController()
+        let vm = MainListViewModel()
         vc.coordinator = self
+        
+        vc.bind(viewModel: vm)
         navigationController.pushViewController(vc, animated: false)
     }
     
