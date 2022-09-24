@@ -70,5 +70,10 @@ extension MainListViewController : UITableViewDelegate, UITableViewDataSource{
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let content = viewModel.content(at: indexPath.row)
+        coordinator?.detail()
+    }
+    
     
 }

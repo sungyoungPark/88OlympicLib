@@ -99,12 +99,12 @@ class MainListTableViewCell: UITableViewCell {
         subDescriptionLabel.snp.makeConstraints { make in
             make.leading.trailing.equalTo(0)
         }
-        
+        /*
         descriptionStackView.addArrangedSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
             make.leading.trailing.equalTo(0)
         }
-        
+        */
         
     }
     

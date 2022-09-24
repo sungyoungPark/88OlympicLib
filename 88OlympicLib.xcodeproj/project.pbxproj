@@ -13,6 +13,8 @@
 		5BE02E8F28BB4C7900E17771 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE02E8E28BB4C7900E17771 /* MainListViewController.swift */; };
 		5BE02E9428BB4C7B00E17771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE02E9328BB4C7B00E17771 /* Assets.xcassets */; };
 		5BE02E9728BB4C7B00E17771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE02E9528BB4C7B00E17771 /* LaunchScreen.storyboard */; };
+		5BFABD4A28DF7ED000EF11B0 /* DetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABD4928DF7ED000EF11B0 /* DetailContentViewController.swift */; };
+		5BFABD4D28DF80AF00EF11B0 /* DetailContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABD4C28DF80AF00EF11B0 /* DetailContentViewModel.swift */; };
 		5BFB3EA628BB51D900B562E3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB3EA528BB51D900B562E3 /* Coordinator.swift */; };
 		5BFB3EA828BB525100B562E3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB3EA728BB525100B562E3 /* MainCoordinator.swift */; };
 		5BFB3EAC28BB547200B562E3 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB3EAB28BB547200B562E3 /* MainListViewModel.swift */; };
@@ -34,6 +36,8 @@
 		5BE02E9328BB4C7B00E17771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE02E9628BB4C7B00E17771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE02E9828BB4C7B00E17771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFABD4928DF7ED000EF11B0 /* DetailContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentViewController.swift; sourceTree = "<group>"; };
+		5BFABD4C28DF80AF00EF11B0 /* DetailContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentViewModel.swift; sourceTree = "<group>"; };
 		5BFB3EA528BB51D900B562E3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5BFB3EA728BB525100B562E3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		5BFB3EAB28BB547200B562E3 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
@@ -101,6 +105,14 @@
 			path = 88OlympicLib;
 			sourceTree = "<group>";
 		};
+		5BFABD4B28DF807600EF11B0 /* DetailContent */ = {
+			isa = PBXGroup;
+			children = (
+				5BFABD4928DF7ED000EF11B0 /* DetailContentViewController.swift */,
+			);
+			path = DetailContent;
+			sourceTree = "<group>";
+		};
 		5BFB3EA428BB518A00B562E3 /* Scene_Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				5B4F57DD28CCF8D30062F5D7 /* MainList */,
+				5BFABD4B28DF807600EF11B0 /* DetailContent */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				5BFB3EAB28BB547200B562E3 /* MainListViewModel.swift */,
+				5BFABD4C28DF80AF00EF11B0 /* DetailContentViewModel.swift */,
 				5BFB3EAD28BB55EA00B562E3 /* ViewModelBindableType.swift */,
 			);
 			path = ViewModel;
@@ -292,7 +306,9 @@
 				5BFB3EB128BB5E7200B562E3 /* ContentRepository.swift in Sources */,
 				5BFB3EA628BB51D900B562E3 /* Coordinator.swift in Sources */,
 				5BFB3EB828BB62FC00B562E3 /* RecordModel.swift in Sources */,
+				5BFABD4D28DF80AF00EF11B0 /* DetailContentViewModel.swift in Sources */,
 				5BE02E8D28BB4C7900E17771 /* SceneDelegate.swift in Sources */,
+				5BFABD4A28DF7ED000EF11B0 /* DetailContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,6 +26,15 @@ class MainCoordinator: NSObject, Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func detail(){
+        var vc = DetailContentViewController()
+        let vm = DetailContentViewModel()
+        vc.coordinator = self
+        
+        vc.bind(viewModel: vm)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     /*
     func goNewsPage(url : URL){
         let vc = ShowNewsViewController()
